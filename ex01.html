@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트로 색상 바꾸기</title>
+    <!-- JQuery를 적용한 방식 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu2 li").css("color", "#f00");
+        }) 
+    </script>
 </head>
 <body>
     <div>
@@ -22,5 +29,18 @@
             <li>동태탕</li>
         </ul>
     </div>
+
+    <!-- Jquery가 아닌 자바스크립트 작성 방식
+    <script>
+        window.onload = function () {
+            var menu2 = document.getElementById("menu2");
+            var liArrays = menu2.getElementsByTagName("li");
+            for(var i=0; i<liArrays.length; i++) {
+                var li = liArrays[i];
+                li.style.color = "blue";
+            }
+        }
+    </script> -->
+
 </body>
 </html>
